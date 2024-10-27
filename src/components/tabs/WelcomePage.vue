@@ -43,7 +43,7 @@ export default {
       introTitle: "Welcome to My E-Portfolio!",
       introText: "Hello! I'm Théo Armaghan, an engineering student passionate about technology, sustainability, and innovation.",
       linkedInUrl: "https://www.linkedin.com/in/theo-armaghan", // Replace with your LinkedIn URL
-      cvUrl: "/CV.pdf", // Update with your CV file path
+      cvUrl: "CV.pdf", // Update with your CV file path
       hobbies: ["Traveling", "Gaming", "Coding", "Sports", "Chess"],
       videoUrl: "https://youtube.com/", // Replace with your video URL
       aboutMeText: "I am currently a first year engineering student at ENSEEIHT. My interests lie in IA, software development, and sustainable technologies. I enjoy collaborating on innovative and opensource projects and am always eager to learn new skills. Feel free to contact me on LinkedIn or via email if you would like to connect or collaborate!",
