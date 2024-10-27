@@ -58,9 +58,9 @@ export default {
   data() {
     return {
       cvLink: 'CV.pdf',
-      linkedinLink: 'https://www.linkedin.com/in/yourprofile',
+      linkedinLink: 'https://www.linkedin.com/in/th%C3%A9o-armaghan-3540412b7/',
       videoLink: 'https://www.youtube.com/embed/K8Ak1z18tC0',
-      internshipReportLink: '/RapportStageL2_ArmaghanThéo.pdf',
+      internshipReportLink: 'RapportStageL2_ArmaghanThéo.pdf',
       llmReportLink: '/LLM_pi.pdf',
       isCardFocused: false,
       focusedCard: null
