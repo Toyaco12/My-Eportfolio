@@ -1,0 +1,57 @@
+# Workflow pour déployer du contenu statique sur GitHub Pages
+name: Deploy Vue.js App to GitHub Pages
+
+on:
+  # Exécute le workflow sur les pushes vers la branche par défaut
+  push:
+    branches: ["main"]
+
+  # Permet d'exécuter ce workflow manuellement à partir de l'onglet Actions
+  workflow_dispatch:
+
+# Définit les permissions du GITHUB_TOKEN pour permettre le déploiement sur GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Permet un seul déploiement simultané, sans annuler les déploiements en cours
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Travail de déploiement unique, car nous déployons simplement
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      # Vérifier le code du dépôt
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Installer Node.js, npm et les dépendances
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16' # Utilise une version stable de Node.js compatible avec Vue.js
+
+      - name: Install dependencies
+        run: npm install
+
+      # Construire le projet
+      - name: Build project
+        run: npm run build
+
+      # Télécharger le contenu construit dans le dossier `dist`
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'dist' # Télécharge uniquement le dossier construit
+
+      # Déployer sur GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
