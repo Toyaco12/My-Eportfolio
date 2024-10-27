@@ -8,8 +8,11 @@
   </head>
   <body>
     <script type="text/javascript">
-      // Rediriger toutes les routes vers index.html
-      window.location.href = "/My-Eportfolio";
+      // Redirection JavaScript pour gérer les routes côté client
+      (function() {
+        var redirectTo = window.location.pathname;
+        window.location.replace('/My-Eportfolio/' + redirectTo);
+      })();
     </script>
   </body>
 </html>
