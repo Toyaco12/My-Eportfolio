@@ -39,7 +39,7 @@ export default {
   name: "WelcomePage",
   data() {
     return {
-      profileImage: "/Theo.png", // Update with your profile picture path
+      profileImage: "<%= BASE_URL %>Theo.png",
       introTitle: "Welcome to My E-Portfolio!",
       introText: "Hello! I'm Théo Armaghan, an engineering student passionate about technology, sustainability, and innovation.",
       linkedInUrl: "https://www.linkedin.com/in/theo-armaghan", // Replace with your LinkedIn URL
