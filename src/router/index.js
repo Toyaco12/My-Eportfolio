@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import Welcome from '../components/tabs/WelcomePage.vue';
 import EngineeringCourse from '../components/tabs/EngineeringCourse.vue';
 import InternationalMobility from '../components/tabs/InternationalMobility.vue';
@@ -17,8 +17,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
-  //history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(process.env.BASE_URL),
   routes
 });
 
