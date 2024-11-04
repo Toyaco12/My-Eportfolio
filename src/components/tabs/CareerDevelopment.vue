@@ -31,7 +31,11 @@
   <div class="icons flex gap-8 justify-center">
     <a :href="cvLink" target="_blank" class="flex flex-col items-center text-gray-200 hover:text-accent transition-transform transform hover:scale-110">
       <i class="fas fa-file-alt text-6xl mb-2"></i>
-      <span class="text-lg">CV</span>
+      <span class="text-lg">CV EN</span>
+    </a>
+    <a :href="cvFrenchLink" target="_blank" class="flex flex-col items-center text-gray-200 hover:text-accent transition-transform transform hover:scale-110">
+      <i class="fas fa-file-alt text-6xl mb-2"></i>
+      <span class="text-lg">CV FR</span>
     </a>
     <a :href="linkedinLink" target="_blank" class="flex flex-col items-center text-gray-200 hover:text-accent transition-transform transform hover:scale-110">
       <i class="fab fa-linkedin text-6xl mb-2"></i>
@@ -58,6 +62,7 @@ export default {
   data() {
     return {
       cvLink: 'CV.pdf',
+      cvFrenchLink: 'CV_French.pdf',
       linkedinLink: 'https://www.linkedin.com/in/th%C3%A9o-armaghan-3540412b7/',
       videoLink: 'https://www.youtube.com/embed/K8Ak1z18tC0',
       internshipReportLink: 'RapportStageL2_ArmaghanThéo.pdf',
