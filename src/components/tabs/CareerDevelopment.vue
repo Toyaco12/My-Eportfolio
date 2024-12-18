@@ -51,6 +51,13 @@
         <iframe :src="videoLink" class="w-full h-64 md:h-96 rounded-lg shadow-lg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
+
+    <div class="video-section bg-secondary shadow-lg rounded-xl p-12 w-full max-w-7xl mt-12 flex flex-col items-center">
+      <h2 class="text-4xl font-semibold text-gray-100 text-center mb-12">Japanese Video</h2>
+      <div class="video-container w-full max-w-3xl">
+        <iframe :src="videoLink2" class="w-full h-64 md:h-96 rounded-lg shadow-lg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -65,6 +72,7 @@ export default {
       cvFrenchLink: 'CV_French.pdf',
       linkedinLink: 'https://www.linkedin.com/in/th%C3%A9o-armaghan-3540412b7/',
       videoLink: 'https://www.youtube.com/embed/K8Ak1z18tC0',
+      videoLink2: 'https://www.youtube.com/embed/DuLz5VkF1Bc',
       internshipReportLink: 'RapportStageL2_ArmaghanThéo.pdf',
       llmReportLink: '/LLM_pi.pdf',
       isCardFocused: false,
